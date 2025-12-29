@@ -2,7 +2,7 @@
     "name": "picios/dlocksdk",
     "description": "php sdk for DLock API",
     "type": "library",
-    "keywords": ["sdk", "API", "DLock"],
+    "keywords": ["sdk", "API", "DLock", "authentication", "2FA"],
     "license": "CC-BY-3.0",
     "require": {
 		"php": ">=8.0"
