@@ -1,8 +1,8 @@
 <?php
 
-namespace RewolWeb\DlockSDK;
+namespace Picios\DlockSDK;
 
-class DlockSDKConnect
+class DlockSDKConnection
 {
 
     public function __construct(private string $dlockBackendUrl, private string $dlockPartnerAddress)

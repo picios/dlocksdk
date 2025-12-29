@@ -1,21 +1,20 @@
 <?php
 
-namespace RewolWeb\DlockSDK\Test;
+namespace Picios\DlockSDK\Test;
 
 use PHPUnit\Framework\TestCase;
-use RewolWeb\DlockSDK\DlockSDKConnect;
-use RewolWeb\DlockSDK\Request\DlockSDKAuth;
+use Picios\DlockSDK\DlockSDKConnection;
 
 class DlockConnectTest extends TestCase
 {
     public function testConnect()
     {
-        $connect = new DlockSDKConnect(
+        $connection = new DlockSDKConnection(
             'https://example.com',
             'partner_address_123'
         );
 
-        $this->assertEquals('https://example.com', $connect->getBackendUrl());
-        $this->assertEquals('partner_address_123', $connect->getPartnerAddress());
+        $this->assertEquals('https://example.com', $connection->getBackendUrl());
+        $this->assertEquals('partner_address_123', $connection->getPartnerAddress());
     }
 }

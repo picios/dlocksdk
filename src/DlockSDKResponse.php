@@ -1,6 +1,6 @@
 <?php
 
-namespace RewolWeb\DlockSDK;
+namespace Picios\DlockSDK;
 
 class DlockSDKResponse
 {
