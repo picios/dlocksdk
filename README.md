@@ -14,7 +14,7 @@ composer require picios/dlocksdk
 ## Usage
 
 ### Creating a new token
-You need to create the token first, to  e.g. send it as a query parameter in en email message
+You need to create a connection object first and then use it in request
 
 ``` php
 <?php
