@@ -1,0 +1,22 @@
+{
+    "name": "picios/dlocksdk",
+    "description": "php sdk for DLock API",
+    "type": "library",
+    "require": {
+		"php": ">=8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Revolweb\\Dlocksdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Peter S",
+            "email": "1941892+picios@users.noreply.github.com"
+        }
+    ]
+}
