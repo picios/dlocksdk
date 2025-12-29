@@ -2,6 +2,8 @@
     "name": "picios/dlocksdk",
     "description": "php sdk for DLock API",
     "type": "library",
+    "keywords": ["sdk", "API", "DLock"],
+    "license": "CC-BY-3.0",
     "require": {
 		"php": ">=8.0"
     },
@@ -10,7 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Revolweb\\Dlocksdk\\": "src/"
+            "Picios\\DlockSDK\\": "src/"
         }
     },
     "authors": [
