@@ -54,17 +54,21 @@ class DlockSDKConnection
             case "POST":
                 curl_setopt($curl, CURLOPT_POST, 1);
 
-                if ($data != null)
+                if ($data != null) {
                     curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+                }
                 break;
             case "PUT":
                 curl_setopt($curl, CURLOPT_PUT, 1);
                 break;
             default:
-                if ($data != null)
+                if ($data != null) {
                     $url = sprintf("%s?%s", $url, http_build_query($data));
+                }
+                break;
         }
         
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         //$this->authenticate($curl, 'username', 'password');
