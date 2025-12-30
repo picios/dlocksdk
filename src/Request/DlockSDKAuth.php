@@ -4,6 +4,7 @@ namespace Picios\DlockSDK\Request;
 
 use Picios\DlockSDK\DlockSDKConnection;
 use Picios\DlockSDK\DlockSDKResponse;
+use Picios\DlockSDK\DlockSDKSession;
 
 class DlockSDKAuth
 {
@@ -29,14 +30,26 @@ class DlockSDKAuth
         ]);
     }
 
-    public function getQRcodeImage(string $sessionId, ?string $webHookUrl = null): DlockSDKResponse
+    public function getQRcodeImage(?string $sessionId = null, ?string $webHookUrl = null): DlockSDKResponse
     {
+        if ($sessionId === null) {
+            $sessionId = DlockSDKSession::generateSessionId();
+        }
         return $this->dlockSdkConnection->get('/getDlockQRcodeImage', [
             'partnerDHCAddress' => $this->dlockSdkConnection->getPartnerAddress(),
             'intent' => 'LOGIN',
             'webHookUrl' => $webHookUrl,
             'sessionId' => $sessionId,
         ]);
+    }
+
+    public function getDHCAFromQuery(array $payload): ?string
+    {
+        //$sessionId = $payload['sessionId'];
+        //$status = $payload['status'];
+        //$userDHCAddress = $payload['userDHCAddress'] ?? null;
+        //$intent = $payload['intent'] ?? 'LOGIN';
+        return $payload['DHCAddress'] ?? null;
     }
 
 }
